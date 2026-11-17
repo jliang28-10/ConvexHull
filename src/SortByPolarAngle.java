@@ -108,8 +108,21 @@ public class SortByPolarAngle {
      */
     public static void insertionSortByPolarAngle(Point2D[] pts, Point2D p) {
         // TODO 2b: write insertion sort here
+        /*int size = arr.size();
+        for(int i=1; i<size; i++){
+            int swap=0;
+            for(int j=i-1; j>=0; j--){
+                if(arr.less(i,j))
+                    swap++;
+                if(arr.less(j,i))
+                    break;
 
-
+            }
+            for(int k=i; k>=i-swap+1; k--){
+                arr.swap(k,k-1);
+            }
+        }
+*/
 
     }
 

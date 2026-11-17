@@ -77,8 +77,16 @@ public class SortByY {
      */
     public static void selectionSortByY(Point2D[] pts) {
         // TODO 1b: write selection sort here
-
-
+       /* int size= arr.size();
+        for(int i=0; i<arr.size()-1; i++){
+            int min=i;
+            for(int j=i+1; j<size; j++){
+                if(arr.less(j,min))
+                    min=j;
+            }
+            arr.swap(i,min);
+        }
+*/
 
     }
 
