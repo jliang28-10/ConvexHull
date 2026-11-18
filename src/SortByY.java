@@ -44,6 +44,14 @@ public class SortByY {
      */
     public static int compareByY(Point2D a, Point2D b) {
         // TODO 1a: replace this line with your four steps
+        if(a.y()<b.y())
+            return -1;
+        else if(b.y()<a.y())
+            return 1;
+        else if(b.x()<a.x())
+            return 1;
+        if(a.x()<b.x())
+            return -1;
         return 0;
     }
 
@@ -77,16 +85,16 @@ public class SortByY {
      */
     public static void selectionSortByY(Point2D[] pts) {
         // TODO 1b: write selection sort here
-       /* int size= arr.size();
-        for(int i=0; i<arr.size()-1; i++){
+        int size= pts.length;
+        for(int i=0; i<size-1; i++){
             int min=i;
             for(int j=i+1; j<size; j++){
-                if(arr.less(j,min))
+                if(compareByY(pts[j],pts[min])<0)
                     min=j;
             }
-            arr.swap(i,min);
+            exch(pts,i,min);
         }
-*/
+
 
     }
 

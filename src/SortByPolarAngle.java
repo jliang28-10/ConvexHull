@@ -71,7 +71,14 @@ public class SortByPolarAngle {
      */
     public static int compareByPolarAngle(Point2D p, Point2D a, Point2D b) {
         // TODO 2a: replace this line with your four steps
-        return 0;
+        if(a.y()==b.y()&&a.x()==b.x())
+            return 0;
+        int turn = Point2D.ccw(p,a,b);
+        if(turn!=0)
+            return -turn;
+        if(p.distanceSquaredTo(a)<p.distanceSquaredTo(b))
+            return -1;
+        return 1;
     }
 
     /**
@@ -108,21 +115,19 @@ public class SortByPolarAngle {
      */
     public static void insertionSortByPolarAngle(Point2D[] pts, Point2D p) {
         // TODO 2b: write insertion sort here
-        /*int size = arr.size();
+        int size = pts.length;
         for(int i=1; i<size; i++){
             int swap=0;
             for(int j=i-1; j>=0; j--){
-                if(arr.less(i,j))
+                if(compareByPolarAngle(p,pts[i],pts[j])<0)
                     swap++;
-                if(arr.less(j,i))
-                    break;
 
             }
             for(int k=i; k>=i-swap+1; k--){
-                arr.swap(k,k-1);
+                exch(pts,k,k-1);
             }
         }
-*/
+
 
     }
 
